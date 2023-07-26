@@ -6,7 +6,6 @@ import org.springframework.stereotype.Service;
 import com.springboot_unit_test_mockito.dao.StudentDao;
 import com.springboot_unit_test_mockito.entity.Student;
 
-
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
@@ -27,6 +26,10 @@ public class StudentService {
 
     public Student saveStudent(Student student) {
         return studentDao.save(student);
+    }
+
+    public List<Student> saveAllStudents(List<Student> students) {
+        return studentDao.saveAll(students);
     }
 
     public void deleteStudentById(UUID id) {
